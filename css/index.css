@@ -1,0 +1,734 @@
+@font-face {
+    font-family: "Racing Sans One";
+    src: url("../fonts/RacingSansOne-Regular.ttf") format("truetype");
+}
+
+:root {
+    --main-bg-color: #259DB7;
+}
+
+body {
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction:column;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 120px;
+}
+
+.main_home {
+    padding-top: 0px;
+}
+
+input {
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+header i {
+    font-size: 2em;
+}
+
+
+.home_page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quote {
+    font-family: "Racing Sans One";
+    font-size: 2.5em;
+}
+
+
+nav { 
+    font-family: "Raleway", Arial, Helvetica, sans-serif; 
+    display: none;
+   
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+
+#hamburger-menu:checked ~ nav {
+    display: block;
+    width: 100%;  
+}
+
+
+nav ul {
+    background-color: var(--main-bg-color);
+    padding: 0px;
+    width: fit-content;
+    list-style-type: none;
+    left: 0px;
+    top: 55px;
+    
+}
+
+nav ul li {
+    font-size: 1.3em;
+    text-align: left;
+    padding: 10px;
+}
+   
+nav ul a {
+        text-decoration: none;
+    }
+  
+
+.nav_around {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    background: #fff;
+}
+
+.position_nav {
+    position: absolute;
+}
+
+.nav_home {
+    position: absolute;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.active {
+        text-decoration: underline;
+    } 
+    
+.logo_home { 
+        display: block;
+        width: 80%;
+        padding: 20px;
+        margin: auto;
+        }
+
+.header_image {
+        background-image: url("../images/background/homepage4-1.png");
+        background-size: 100%;
+        background-position: fixed;
+        background-repeat: no-repeat;
+        width: 100%;
+        margin-top: 30px;
+        }
+        
+.logo {
+    display: block;
+    height: 10vh;
+    margin: 0px auto;
+}
+
+.left_side, .right_side {
+    align-self: center;
+}
+
+
+
+.footer_mobile { 
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.mobile_footer_smlogo {
+    padding-top: 10px;
+    margin: auto;
+}
+
+.logo_footer {
+    size: auto;
+    height: 8vh;
+    padding-top: 3px;
+}
+
+
+.footer_desktop {
+    display: none;
+}
+
+
+/* HOME PAGE */
+
+
+.home_header  {
+    margin: 30px;
+    padding-top: 10px;
+   
+}
+
+.home_page {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.first_display {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.first_display img {
+    max-width: 100%;
+    margin-top:20px;
+}
+
+.first_display h1 {
+    font-size: 1.5em;
+    font-weight: 50;
+    padding: 0px 10px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* Buttons */
+
+.cta_button { 
+        background-color: var(--main-bg-color);
+        text-decoration: none;
+        border-radius: 15px;
+        font-family: "Raleway", Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        color: #000;
+        border: none;
+        padding: 10px 30px;
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+    }
+    
+.shopnow {
+    background-color: var(--main-bg-color);
+    font-size: 1.5em;
+    font-family: "Raleway", Arial, Helvetica, sans-serif ;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin: auto;
+ }
+ 
+.cart {
+    margin: auto;
+    padding: 10px;
+}
+
+.send {
+    font-size: 1em;
+    margin: 10px auto;
+    width: 20px;
+}
+
+.payment {
+    padding: 10px 30px;
+    font-size: 1em;
+}
+
+body a {
+    color: #000;
+    text-decoration: none;
+}
+
+ .submit {
+        border: none;
+        border-radius: 15px;
+        margin: 0px 10px 0px 160px;
+        font-size: 1em ;
+        font-family: "Raleway";
+        background-color: #c3c3c3;
+        margin: 10px auto;
+        padding: 10px;
+    }
+    
+.newsletter__email {
+        width: auto;
+        font-size: 0.8em;
+        margin: 5px 0px;
+        padding: 10px;
+        color:#000;
+    }
+
+/* PRODUCT PAGE */
+
+#delivery {
+    padding: 10px;
+    font-size: 1em;
+}
+.products {
+    width: 100%;
+}
+
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;;
+}
+
+.products h2 {
+    font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.products_image {
+    width: 100%;
+}
+.products_display {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 100%;
+}
+.product {
+    display:flex;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+.product_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.box {
+    width: 300px;
+    height: 5vh;
+    font-size: 1.5em;
+    
+}
+
+.box_message {
+    width: 300px;
+    height: 50vh;
+}
+
+.box,
+.box_message {
+    box-shadow: none;
+    border-radius: 4px;
+    background-color: #F2F2F2;
+}
+
+main p {
+    font-size: 1.5em;
+    text-align: justify;
+    padding: 15px;
+    
+}
+
+.logos {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.logo_icon {
+    height: 70px;
+    width: 70px;
+    justify-content: space-between;
+}
+
+
+
+
+/* CHECKOUT PAGE */
+
+.checkout_container img {
+    width: 80%;
+    padding: 20px;
+    margin: 30px;
+    
+    
+}
+
+.checkout_container section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+ }
+
+ .checkout_display p {
+    padding-top:30px;
+    padding-bottom: 20px;
+ }
+.checkout_display div {
+    justify-content: center;
+    margin: auto;
+}
+
+ .product_detail p {
+    text-align: center;
+ }
+
+ .product_detail h1 {
+    font-size: 1.8em;
+ }
+
+ .price {
+    text-align: center;
+ }
+
+/* CONTACT PAGE */
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 50px;
+}
+
+
+main i {
+    font-size: 0.8;
+}
+
+.contact_page h1 {
+    text-align: center;
+}
+
+.error {
+    background-color: red;
+    color: white;
+    padding: 0 10px;
+    margin: 2px 0px;
+    border-radius: 2px;
+}
+
+#success {
+    background-color: green;
+    color: white;
+    padding: 2px 10px;
+    margin: 2px 0px;
+    border-radius: 2px;
+}
+
+.succes p {
+    padding: 20px;
+    text-align: center;
+}
+
+.continue {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+.about p {
+    padding: 20px;
+    margin: 20px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.error {
+    display: none;
+}
+
+
+@media (min-width: 550px) and (max-width:799px) {
+   
+
+
+    .footer_mobile {
+        display: none;
+    }
+
+    .products_display { 
+        align-self: center;
+    }
+
+.footer_desktop {
+        background-color: var(--main-bg-color);
+        display: flex;
+        justify-content: space-between;   
+        font-family: "Raleway", Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        padding: 10px 15px;
+        margin-top: 50px;
+      
+    }
+    
+footer div {
+        margin-left: 20px;
+        margin-right: 20px;
+       
+    }
+.social_media {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm_logo {
+     height: 30px;  
+    }
+
+.shopnow {
+        font-size: 2em;
+    }
+ 
+   footer i {
+        font-size: 1em;
+    }
+
+    .first_display {
+        flex-direction: row;
+    }
+
+   .first_display h1{
+    font-size: 2.5em;
+   }
+
+
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+   header .fa-solid {
+    display: none;
+   }
+
+
+    nav {
+        display: block;
+        font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+    
+    }
+nav a:hover {
+    font-size: 1.5em;
+}
+
+  .position_nav {
+        position: sticky;
+  }
+
+    .left_side,
+    .right_side {
+        display: none;
+    }
+
+.nav { 
+        display: flex;
+        justify-content: space-between;
+        background-color: #259DB7;
+        border: none;
+        border-radius: 0 0 0 15px;
+        text-align:center;
+        padding: 0px 20px;
+        width: 100%;
+    }
+    
+nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width:100%;
+        margin-top: 10px;
+        top: 5px;
+    }
+
+.nav_home {
+    background-color: #fff;
+}
+
+.header_image {
+    margin-top: 60px;
+}
+    
+nav li {
+        display: inline-block; 
+        justify-content: space-between;
+        padding: 10px;
+        margin: 10px;
+        font-size: 1.5em;
+        
+    }
+
+header {
+    margin: 0px;
+}
+
+
+header div {
+        flex-wrap: nowrap;
+
+    }
+
+    .shopnow {
+        font-size: 2em;
+    }
+
+
+main {
+    width: 100%;
+    display: block;
+}
+
+.logo {
+        height: 70px;
+        width: auto;
+        margin: 30px;
+        position: relative;
+    }
+
+.logo_home {
+    width: 100%;
+    margin: 20px auto;
+}
+
+figure {
+    max-width: 600px;
+    margin: 0px auto;
+
+}
+
+i {
+    font-size: 1em;
+}
+
+.footer_mobile {
+    display: none;
+}
+
+.footer_desktop {
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-top: 50px;
+}
+
+.social_media {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px;
+       
+    }
+
+    .first_display {
+        flex-direction: row;
+    }
+    .first_display h1{
+        font-size: 3.5em;
+       }
+
+.sm_logo {
+        height: 50px;  
+    }
+    /* Product page */
+    .products {
+        background-color: #c3c3c3; 
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    .products_display {
+        grid-template-columns: 1fr 1fr;
+        max-width: 90%;
+    }
+
+    .product {
+        box-shadow: none;
+    }
+
+    footer section {
+        display: grid;
+      
+    }
+    
+    header {
+        grid-column: span 2;
+    }
+    
+    footer {
+        grid-column: span 2;
+    }
+    
+    .checkout_display div {
+        margin: 50px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .checkout_container section {
+      
+    }
+    
+    .checkout_container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .checkout_container p {
+        font-family: "Raleway", Arial, Helvetica, sans-serif;
+        margin: 0px auto;
+        padding: 10px;
+    }
+
+    .product_detail {
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+    }
+
+    .contact_page h1 {
+        grid-area: span 2;
+    }
+
+    .item {
+        text-align: left;
+        align-items: center;
+        width: 20em;
+        margin: 20px;
+       
+    }
+    
+    .container {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 50px;
+       
+    }
+    .newsletter__email {
+        width: 300px;
+        color: black;
+    }
+  
+
+
+} 
