@@ -45,7 +45,7 @@ async function getProducts() {
 
         for (i = 0; i < results.length; i++) {
                 displayContainer.innerHTML += `<div class="product_display">
-                                       <a href="details.html?=${results[i].id}" aria-label="jacket"><div class="product">
+                                       <a href="details.html?id=${results[i].id}" aria-label="jacket"><div class="product">
                                        <figure> <img src="${results[i].images[0].src}" alt="Product jacket" class="products_image">
                                        </figure>
                                         <div class="product_details">
