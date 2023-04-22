@@ -31,32 +31,67 @@
 //     }
 // };
 
-const productContainer = document.querySelector(".products");
+
 const displayContainer = document.querySelector(".products_display");
 
-const url = "http://simplygreatno.local/wp-json/wc/store/products";
+const productsUrl = "http://simplygreatno.local/wp-json/wc/store/products";
 
 async function getProducts() {
-        const response = await fetch(url);
+        const response = await fetch(productsUrl);
         
         const results = await response.json();
 
         console.log(results);
 
-        for (i = 0; i < results.length; i++) {
-                displayContainer.innerHTML += `<div class="product_display">
-                                       <a href="details.html?id=${results[i].id}" aria-label="jacket"><div class="product">
-                                       <figure> <img src="${results[i].images[0].src}" alt="Product jacket" class="products_image">
-                                       </figure>
-                                        <div class="product_details">
-                                    <h2>${results[i].name}</h2>
-                                     <h3>${results[i].short_description}</h3>
-                                        <p>${results[i].price_html}</p>
-                                        <input type="button" value="View more" class="cta_button"></a>
-                                    </div></div></div>`
-        };
+        return results;
+
+        // for (i = 0; i < results.length; i++) {
+        //         displayContainer.innerHTML += `<div class="product_display">
+        //                                <a href="details.html?id=${results[i].id}" aria-label="jacket"><div class="product">
+        //                                <figure> <img src="${results[i].images[0].src}" alt="Product jacket" class="products_image">
+        //                                </figure>
+        //                                 <div class="product_details">
+        //                             <h2>${results[i].name}</h2>
+        //                              <h3>${results[i].short_description}</h3>
+        //                                 <p>${results[i].price_html}</p>
+        //                                 <input type="button" value="View more" class="cta_button"></a>
+        //                             </div></div></div>`
+        // };
     
 };
 
 getProducts();
 
+
+
+async function renderSingleProductHTML(product) {
+        const { id, name, description, price_html, images } = product;
+        const wrapper = document.createElement("a");
+        const image = document.createElement("img");
+        const heading = document.createElement("h1");
+        const body = document.createElement("p");
+        const price = document.createElement("h2")
+        wrapper.href = `details.html?id=${id}`;
+        image.innerHTML = images.src;
+        heading.innerText = name;
+        body.innerHTML = description;
+        price.innerHTML = price_html;
+        wrapper.append( heading, body, price);
+        return wrapper;
+        
+}
+
+renderSingleProductHTML();
+
+async function renderProducts() {
+        const products = await getProducts();
+        console.log(products);
+        products.forEach(async product => {
+                const productHTML = await renderSingleProductHTML(product);
+                displayContainer.appendChild(productHTML);
+            });
+}
+
+renderProducts();
+
+     
