@@ -57,41 +57,44 @@ async function getProducts() {
         //                                 <input type="button" value="View more" class="cta_button"></a>
         //                             </div></div></div>`
         // };
-    
 };
 
-getProducts();
 
-
-
-async function renderSingleProductHTML(product) {
+function renderSingleProductHTML(product) {
         const { id, name, description, price_html, images } = product;
         const wrapper = document.createElement("a");
         const image = document.createElement("img");
-        const heading = document.createElement("h1");
+        const heading = document.createElement("h2");
         const body = document.createElement("p");
-        const price = document.createElement("h2")
+        const price = document.createElement("h3");
+        const button = document.createElement("button")
         wrapper.href = `details.html?id=${id}`;
-        image.innerHTML = images.src;
+        image.src = images[0].src;
         heading.innerText = name;
         body.innerHTML = description;
         price.innerHTML = price_html;
-        wrapper.append( heading, body, price);
-        return wrapper;
-        
+        button.innerText = "View more";
+        wrapper.classList.add("display");
+        button.classList.add("cta_button");
+        price.classList.add("price_tag")
+        wrapper.append( heading, image, price, button );
+        return wrapper;  
 }
 
-renderSingleProductHTML();
+
 
 async function renderProducts() {
         const products = await getProducts();
         console.log(products);
-        products.forEach(async product => {
-                const productHTML = await renderSingleProductHTML(product);
+        products.forEach(product => {
+                const productHTML = renderSingleProductHTML(product);
                 displayContainer.appendChild(productHTML);
             });
 }
 
 renderProducts();
 
-     
+export {
+        renderSingleProductHTML,
+        renderProducts
+}

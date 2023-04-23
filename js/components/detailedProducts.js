@@ -33,3 +33,6 @@ async function detailedProduct() {
 
 detailedProduct()
 
+export { 
+    detailedProduct
+}

@@ -35,6 +35,7 @@ header i {
 }
 
 
+
 .home_page {
     max-width: 800px;
     margin: 0 auto;
@@ -270,7 +271,9 @@ body a {
         padding: 10px;
         color:#000;
     }
-
+.featured_section {
+    
+}
 /* PRODUCT PAGE */
 
 #delivery {
@@ -291,6 +294,8 @@ h1 {
 .products h2 {
     font-family: "Playfair Display", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
 }
 
 .products_image {
@@ -657,7 +662,7 @@ i {
         padding-top: 20px;
     }
     .products_display {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         max-width: 90%;
     }
 
@@ -728,7 +733,16 @@ i {
         width: 300px;
         color: black;
     }
-  
 
+    .price_tag {
+        display: flex;
+        justify-content: center;
+    }
+
+    .display {
+        border: 3px solid grey;
+        padding: 20px;
+        margin: 15px;
+    }
 
 } 
