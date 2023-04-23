@@ -1,26 +1,22 @@
 
 
-// fetch('http://simplygreatno.local/wp-json/wc/store/products?featured=true')
-//   .then(response => response.json())
-//   .then(data => {
-//     const featuredProducts = data;
-//     const displayFeatured = document.createElement("div");
-//     displayFeatured.classList.add("featuredSection");
+fetch('http://simplygreatno.local/wp-json/wc/store/products?consumer_key=ck_eb01f640c8f1377d2440e0559f6d5f1e6cf00468&consumer_secret=cs_fbed2a8a585459aef9a9d66ffa32042b80da39e8&featured=true')
+  .then(response => response.json())
+  .then(data => {
+    const featuredProducts = data;
+    const displayFeatured = document.querySelector(".featured_section");
+    displayFeatured.classList.add("featured_section");
     
-//     featuredProducts.forEach(product => {
-//       displayFeatured.innerHTML += `<h3>${product.name}</h3>
-//       <p>${product.description}</p>
-//       <img src="${product.image}">
-//       <p>Price: ${product.price_html}</p>`;
-//     });
+    featuredProducts.forEach(product => {
+        displayFeatured.innerHTML += `<div class="featured">
+      <h2>${product.name}</h2>
+        <img src="${product.images[0].src}">
+      <p>Price: ${product.price_html}</p></div>`;
+    });
 
-//     const featuredSection = document.querySelector(".featured_section");
-//     featuredSection.appendChild(displayFeatured);
-//   })
-//     .catch(error => console.error(error));
+    const featuredSection = document.querySelector(".featured_section");
+    
+  })
+    .catch(error => console.error(error));
   
 
-import { renderSingleProductHTML } from "./products.js";
-import { detailedProduct } from "./detailedProducts.js";
-
-const product = renderSingleProductHTML()
