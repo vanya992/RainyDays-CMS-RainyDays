@@ -9,9 +9,9 @@ fetch('http://simplygreatno.local/wp-json/wc/store/products?consumer_key=ck_eb01
     
     featuredProducts.forEach(product => {
         displayFeatured.innerHTML += `<a href="details.html?id=${product.id}"><div class="featured">
-      <h2>${product.name}</h2>
-        <img src="${product.images[0].src}">
-      <p class="price_tag">${product.price_html}</p></div></a>`;
+                                        <h2>${product.name}</h2>
+                                        <img src="${product.images[0].src}">
+                                        <p class="price_tag">${product.price_html}</p></div></a>`;
     });
 
     const featuredSection = document.querySelector(".featured_section");
