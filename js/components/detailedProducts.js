@@ -10,7 +10,7 @@ const id = params.get("id");
 
 console.log(id);
 
-const url = "http://simplygreatno.local/wp-json/wc/store/products/" + id;
+const url = "https://simplygreat.no/wp-json/wc/store/products/" + id;
 
 async function detailedProduct() {
     const response = await fetch(url);

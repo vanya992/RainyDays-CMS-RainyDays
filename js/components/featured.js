@@ -1,6 +1,6 @@
 
 
-fetch('http://simplygreatno.local/wp-json/wc/store/products?consumer_key=ck_eb01f640c8f1377d2440e0559f6d5f1e6cf00468&consumer_secret=cs_fbed2a8a585459aef9a9d66ffa32042b80da39e8&featured=true')
+fetch('https://simplygreat.no/wp-json/wc/store/products?consumer_key=ck_eb01f640c8f1377d2440e0559f6d5f1e6cf00468&consumer_secret=cs_fbed2a8a585459aef9a9d66ffa32042b80da39e8&featured=true')
   .then(response => response.json())
   .then(data => {
     const featuredProducts = data;
