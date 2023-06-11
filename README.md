@@ -1,26 +1,53 @@
-# RainyDays
+# Blissful-Nirvana
 
-Figma Prototype 
+![image](images/logo.PNG)
 
-https://www.figma.com/file/HSg1riNenTjRq6kSNBDvZY/2022-09-25_design1_ca_Vladimira_Dmitrovic_fp?node-id=0%3A1
+This project is made to inform about different types of yoga.
 
-Netlify link
+## Description
+The Blissful Nirvana project aims to inform people that are interested in yoga about many of its different styles. It covers enough to inform as well those that know nothing about yoga. Images that are displayed should show some of the poses that specific styles include.
 
-https://singular-smakager-43d245.netlify.app/index.html
+## Built With
+
+This project has been made interactiv, and for that I have been using:
+
+- HTML(https://developer.mozilla.org/en-US/docs/Web/HTML)
+- CSS (https://developer.mozilla.org/en-US/docs/Web/CSS)
+- JavaScript (https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- WordPress REST API(https://developer.wordpress.org/rest-api/) WooCommmerce plugin
+
+## Getting Started
+
+### Installing
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:vanya992/Blissful-Nirvana.git
+```
+
+2. Install the dependencies:
+
+```bash
+npm install
+```
+
+### Running
+
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
+## Contributing
+
+Feel free to open a disscusion about changes you would like to make to this project.
+
+## Contact
 
 
-GitHub repositorry
+You can contact me through my linkedin profile: (https://www.linkedin.com/in/vladimira-dmitrovic-090183249/);
 
-https://github.com/vanya992/RainyDays
+or my facebook profile: (https://www.facebook.com/vladimira.dmitrovic.3/?paipv=0&eav=AfYrucvWHIWhHK13qWGSMc6MRoXYCayHsoaKkQBs9Esp-NXJg0XdZYfkbJNqoGlJ3SE&_rdr)
 
-
-External pages for inspiration and problem solving:
-
-https://developer.mozilla.org/en-US/
-
-https://css-tricks.com
-
-https://stackoverflow.com
-
-
-Changes in my figma prototype were maid about positioning some elements, since some new pages were added in my project, I had to change some buttons on prototype. Changes were not big. Hope I did a good job.
