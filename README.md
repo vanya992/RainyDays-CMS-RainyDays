@@ -23,7 +23,7 @@ This project has been made interactiv, and for that I have been using:
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:vanya992/Blissful-Nirvana.git
+git clone git@github.com:vanya992/RainyDays-CMS-RainyDays.git
 ```
 
 2. Install the dependencies:
