@@ -1,6 +1,6 @@
 # Blissful-Nirvana
 
-![image](images/logo_lg.PNG)
+![image](images/logo_lg.png)
 
 This project is made to inform about different types of yoga.
 
